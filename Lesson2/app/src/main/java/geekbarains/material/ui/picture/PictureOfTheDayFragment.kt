@@ -114,6 +114,12 @@ class PictureOfTheDayFragment : Fragment() {
 
     private fun setBottomAppBar(view: View) {
         val context = activity as MainActivity
+        try {
+            context.setSupportActionBar(view.findViewById(R.id.bottom_app_bar))
+        }
+        catch(e:Exception){
+
+        }
         setHasOptionsMenu(true)
         fab.setOnClickListener {
             if (isMain) {

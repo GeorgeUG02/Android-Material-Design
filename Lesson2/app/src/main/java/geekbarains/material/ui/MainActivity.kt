@@ -23,7 +23,11 @@ companion object{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (MainActivity.theme!=0)
+        {
             setTheme(MainActivity.theme)
+
+        }
+
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
