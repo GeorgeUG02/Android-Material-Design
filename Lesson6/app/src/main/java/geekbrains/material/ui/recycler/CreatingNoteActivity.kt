@@ -11,7 +11,7 @@ class CreatingNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.creating_note_activity)
         button3.setOnClickListener {
-             val position = savedInstanceState?.getInt("position")
+             val position = intent.getIntExtra("position",0)
              val name = nameOfNote.text
              val note =note.text
              setResult(RESULT_OK, Intent().apply{
